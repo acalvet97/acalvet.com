@@ -1,0 +1,40 @@
+---
+import { getEntry, getCollection } from 'astro:content';
+import Layout from '../../layouts/DefaultLayout.astro';
+import Header from '../../sections/Header.astro';
+import Footer from '../../sections/Footer.astro';
+import '../../styles/blog.css';
+
+// Add this getStaticPaths function
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+// Get the post from props instead of fetching it
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout title={post.data.title}>
+  <Header />
+  <main class="min-h-[calc(100vh-160px)] max-w-4xl mx-auto px-4 md:px-8 lg:px-16 py-8 md:py-16">
+    <!-- Title -->
+    <h1 class="text-3xl sm:text-4xl mb-2">{post.data.title}</h1>
+    
+    <!-- Date -->
+    <p class="text-gray-500 text-sm mb-4">
+      {post.data.pubDate.toLocaleDateString()}
+    </p>
+
+    <!-- Content -->
+    <article class="prose max-w-none mt-6">
+      <Content />
+    </article>
+  </main>
+  <Footer />
+</Layout>
+

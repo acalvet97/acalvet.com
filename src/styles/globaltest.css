@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: var(--font-family);
+}
+
+:root {
+    /* Neutral Grayscale Palette */
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #adb5bd;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+
+    /* Accent/Utility Colors */
+    --black: #000000;
+    --white: #ffffff;
+
+    /* Optional Naming for Semantic Use */
+    --bg-light: var(--gray-100);
+    --bg-dark: var(--gray-900);
+    --text-light: var(--gray-300);
+    --text-dark: var(--gray-900);
+    --border-color: var(--gray-300);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+
+
+    --font-family: "Geist", sans-serif;
+
+    --display-lg-size: 3rem;
+    --display-lg-line-height: 100%;
+    --display-lg-letter-spacing: -5%;
+
+    --display-md-size: 2.25rem;
+    --display-md-line-height: 120%;
+    --display-md-letter-spacing: -3%;
+
+    --display-sm-size: 1.875rem;
+    --display-sm-line-height: 128%;
+    --display-sm-letter-spacing: -3%;
+
+    --text-xl-size: 1.5rem;
+    --text-xl-line-height: 145%;
+
+    --text-lg-size: 1.25rem;
+    --text-lg-line-height: 145%;
+
+    --text-md-size: 1rem;
+    --text-md-line-height: 150%;
+
+    --text-sm-size: 0.875rem;
+    --text-sm-line-height: 150%;
+}
+
+.wrapper {
+    max-width: calc(1240px + 3rem);
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--white);
+}
+
+header .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    font-size: var(--display-sm-size);
+    line-height: 100%;
+    letter-spacing: var(--display-sm-letter-spacing);
+    color: var(--gray-900);
+    font-weight: 400;
+
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+}
+
+nav a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: var(--gray-900);
+    font-size: var(--text-md-size);
+    line-height: 100%;
+    text-decoration: none;
+}
+
+header nav:hover a {
+    color: var(--gray-500);
+}
+
+header nav a:hover {
+    color: var(--gray-900);
+}
+
+.header-email {
+    font-size: var(--text-lg-size);
+    color: var(--gray-900);
+}
+
+.header-email:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+
+footer {
+    padding: 2rem 0 1rem 0;
+}
+
+
+footer .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}

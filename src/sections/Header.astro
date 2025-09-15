@@ -1,0 +1,45 @@
+<header class="sticky top-0 z-50 max-h-[80px] bg-white border-b border-gray-300 px-4 md:px-8">
+  <div class="max-w-7xl mx-auto flex items-center justify-between h-20">
+    <!-- Logo -->
+    <div class="logo-container">
+      <a href="/" class="logo text-2xl">Albert Calvet</a>
+    </div>
+
+    <!-- Nav (desktop only) -->
+    <nav class="hidden md:flex flex-row gap-6 text-lg">
+      <a href="/about" class="hover:text-gray-400">About</a>
+      <a href="/work" class="hover:text-gray-400">Work</a>
+      <a href="/insights" class="hover:text-gray-400">Insights</a>
+    </nav>
+
+    <!-- Email (desktop only) -->
+    <a href="mailto:hello@acalvet.com" class="hidden md:block text-xl hover:underline">
+      hello@acalvet.com
+    </a>
+
+    <!-- Hamburger (mobile only) -->
+    <button 
+      id="menu-toggle" 
+      aria-label="Toggle menu"
+      class="md:hidden relative w-6 h-5 z-50 mr-1">
+      <span class="absolute top-0 left-0 w-6 h-[2px] bg-black transition-all duration-300 ease-in-out"></span>
+      <span class="absolute top-[8px] left-0 w-6 h-[2px] bg-black transition-all duration-300 ease-in-out"></span>
+      <span class="absolute top-[16px] left-0 w-6 h-[2px] bg-black transition-all duration-300 ease-in-out"></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div 
+  id="mobile-menu"
+  role="navigation"
+  aria-label="Mobile navigation"
+  class="fixed top-[80px] left-0 w-full h-auto bg-white border-b border-gray-300 transform -translate-y-full transition-transform duration-300 ease-in-out md:hidden z-40">
+  <div class="p-6 flex flex-col space-y-6 text-lg">
+    <a href="/about" class="hover:text-gray-400">About</a>
+    <a href="/work" class="hover:text-gray-400">Work</a>
+    <a href="/insights" class="hover:text-gray-400">Insights</a>
+    <a href="mailto:hello@acalvet.com" class="text-xl hover:underline">hello@acalvet.com</a>
+  </div>
+</div>
+

@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+.footer-nav-link {
+    @apply hover:underline;
+}
+
+nav a {
+    display: block;
+    padding: .5rem 1rem;
+}
+
+header nav a {
+    @apply hover:text-gray-900;
+}
+
+h2 {
+    @apply text-2xl;
+}

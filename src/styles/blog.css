@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+
+h2 {
+    @apply mb-4 mt-8;
+}
+
+p {
+    @apply mb-4;
+}

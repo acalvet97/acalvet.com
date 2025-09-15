@@ -1,11 +1,38 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Header from '../sections/Header.astro';
+import Layout from '../layouts/DefaultLayout.astro';
+import Footer from '../sections/Footer.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const title = 'Albert Calvet - Digital Product Manager'
+const description =
+  'Welcome to my personal little space online.'
+const canonical = 'https://acalvet.com/'
 ---
 
-<Layout>
-	<Welcome />
+<Layout title={title} description="{description}" canonical="canonical">
+  <Header />
+  <main>
+    <section id="about" class="about flex items-center justify-center px-4 sm:px-24 md:px-8 py-24 min-h-[calc(100vh-165px)]">
+
+      <div class="innerContainer w-xl flex flex-col gap-8">
+        <img src="../src/assets/profile.webp" alt="Profile photo of Albert Calvet" class="w-48 mix-blend-multiply filter saturate-0">
+        <h1 class="text-5xl">Digital Product Guy Specializing in SaaS</h1>
+        <p class="text-lg text-gray-600">
+          I am a PM who loves helping teams build great products that make a real difference for users.
+          With a strong focus on continuous discovery, I bring solid design skills and deep technical know-how to the table.
+        </p>
+        <div class="hero-links mt-[1rem] flex flex-col sm:flex-row gap-4 sm:gap-[1rem]">
+          <a href="/about" class="px-[2rem] py-[1rem] border rounded-lg border-gray-300 bg-gray-900 text-white hover:bg-gray-700 text-center">
+            Learn more about me
+          </a>
+          <a href="/work" class="px-[2rem] py-[1rem] border rounded-lg border-gray-300 bg-gray-50 text-black hover:bg-white text-center">
+            See what I do
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
 </Layout>
+
+

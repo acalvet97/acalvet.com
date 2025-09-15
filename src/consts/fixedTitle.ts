@@ -1,0 +1,1 @@
+export const fixedTitle: string = 'Albert Calvet - Digital Product Manager'

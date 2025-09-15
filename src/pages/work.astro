@@ -1,0 +1,32 @@
+---
+import Header from '../sections/Header.astro'
+import Footer from '../sections/Footer.astro'
+import Layout from '../layouts/DefaultLayout.astro'
+
+import ProjectCard from "../components/projectCard.astro";
+import { projects } from "../data/projects";
+
+const title = 'Albert Calvet - Digital Product Manager'
+const description =
+  'El mayor evento de boxeo entre streamers y creadores de contenido, organizado por Ibai Llanos. Descubre combates, participantes y cómo ver el evento en directo.'
+const canonical = 'https://acalvet.com/work'
+---
+
+<Layout title={title} description="{description}" canonical="canonical">
+    <Header />
+    <main class="max-w-full min-h-[calc(100vh-160px)] flex flex-col justify-center items-center">
+      <div class="pageHeadings py-16 w-7xl flex flex-col gap-8 items-start">
+        <h1 class="text-5xl">My Projects</h1>
+        <p class="text-gray-600 text-lg">These are some side projects I've been working on recently.</p>
+      </div>
+      <section class="w-7xl pb-24 grid gap-6
+                      grid-cols-1
+                      sm:grid-cols-2
+                      lg:grid-cols-3">
+        {projects.map((project) => (
+          <ProjectCard {...project} />
+        ))}
+      </section>
+    </main>
+    <Footer />
+</Layout>

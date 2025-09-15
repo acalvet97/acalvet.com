@@ -1,0 +1,44 @@
+---
+import "../styles/global.css"
+import {fixedTitle} from "../consts/fixedTitle.ts"
+
+interface Props {
+  title: string
+  description?: string
+  canonical?: string
+  robots?: string
+}
+
+const {
+  title = fixedTitle,
+  description = 'Evento de boxeo aficionado entre streamers y creadores de contenido, organizado por Ibai Llanos',
+  canonical,
+  robots,
+} = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+
+		<meta name="description" content={description} />
+    	{canonical && <link rel="canonical" href={canonical} />}
+    	{robots && <meta name="robots" content={robots} />}
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	</head>
+	<body class="bg-gray-50">
+		<slot />
+		<script src="../scripts/menu.ts"></script>
+	</body>
+</html>
