@@ -2,7 +2,12 @@
 export default {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["GeistSans", "sans-serif"],
+        mono: ["GeistMono", "monospace"],
+      },
+    },
   },
   plugins: [],
 }
