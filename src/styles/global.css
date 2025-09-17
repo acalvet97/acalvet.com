@@ -2,11 +2,13 @@
 
 @font-face {
   font-family: 'Geist';
-  src: url('/fonts/geist/Geist[wght].woff2') format('woff2-variations');
-  font-weight: 100 900; /* variable range */
+  src: url('/fonts/geist/Geist[wght].woff2') format('woff2-variations'),
+       url('/fonts/geist/Geist[wght].woff2') format('woff2');
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
+
 
 
 .footer-nav-link {
