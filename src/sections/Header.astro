@@ -1,9 +1,11 @@
+---
+import Logo from '../components/logo.astro';
+---
+
 <header class="sticky top-0 z-50 max-h-[80px] bg-white border-b border-gray-300 px-4 md:px-8">
   <div class="max-w-7xl mx-auto flex items-center justify-between h-20">
     <!-- Logo -->
-    <div class="logo-container">
-      <a href="/" class="logo text-2xl">Albert Calvet</a>
-    </div>
+    <Logo pathname={Astro.url.pathname} />
 
     <!-- Nav (desktop only) -->
     <nav class="hidden md:flex flex-row gap-6 text-lg">
