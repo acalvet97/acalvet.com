@@ -9,6 +9,11 @@
 }
 
 
+body {
+  font-family: 'Geist', sans-serif;
+}
+
+
 
 .footer-nav-link {
     @apply hover:underline;
