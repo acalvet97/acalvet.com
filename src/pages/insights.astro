@@ -2,6 +2,7 @@
 import Header from '../sections/Header.astro';
 import Footer from '../sections/Footer.astro';
 import Layout from '../layouts/DefaultLayout.astro';
+import PageHeading from '../components/pageHeading.astro';
 
 import { getCollection } from 'astro:content';
 const posts = await getCollection('blog');
@@ -9,15 +10,15 @@ const posts = await getCollection('blog');
 const title = 'Albert Calvet - Insights'
 const description =
   'Here you will find some thoughts about product and other subjects of my interest.'
+
+const pageH1 = 'Insights';
+const pageSubtitle = description;
 ---
 
 <Layout title={title} description={description}>
   <Header />
   <main class="max-w-full min-h-[calc(100vh-165px)] flex flex-col justify-start items-center px-4 sm:px-6 lg:px-8">
-    <div class="pageHeadings py-16 w-full max-w-7xl flex flex-col gap-8 items-start">
-      <h1 class="text-3xl md:text-5xl">Insights</h1>
-      <p class="text-gray-600 text-base text-xl">{description}</p>
-    </div>
+    <PageHeading pageH1={pageH1} pageSubtitle={pageSubtitle}/>
     {posts.length === 0 && <p>No posts found.</p>}
     {posts.length > 0 && 
       <ul class="w-full max-w-7xl flex flex-col gap-4">
