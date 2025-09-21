@@ -7,3 +7,7 @@ h2 {
 p {
     @apply mb-4;
 }
+
+article a {
+    @apply text-blue-600 hover:underline;
+}
