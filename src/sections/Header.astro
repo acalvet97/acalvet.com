@@ -10,14 +10,14 @@ const { pathname } = Astro.url;
     <Logo pathname={Astro.url.pathname} />
 
     <!-- Nav (desktop only) -->
-    <nav class="navbar hidden md:flex flex-row items-center text-lg hover:text-gray-400">
+    <nav class="navbar hidden md:flex flex-row items-center text-md hover:text-gray-400">
       <a href="/about">About</a>
       <a href="/work">Work</a>
       <a href="/insights">Insights</a>
     </nav>
 
     <!-- Email (desktop only) -->
-    <a href="mailto:hello@acalvet.com" class="hidden md:block text-xl hover:underline">
+    <a href="mailto:hello@acalvet.com" class="hidden md:block text-md border border-gray-200 rounded-full px-4 py-2 hover:border-gray-400">
       hello@acalvet.com
     </a>
 
