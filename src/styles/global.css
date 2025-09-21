@@ -17,7 +17,7 @@ body {
 /* Nav styles */
 
 .footer-nav-link {
-    @apply hover:text-gray-900;
+    @apply hover:text-gray-950;
 }
 
 nav a {
@@ -26,11 +26,11 @@ nav a {
 }
 
 header nav a {
-    @apply hover:text-gray-900 min-h-[100%];
+    @apply hover:text-gray-950 min-h-[100%];
 }
 
 header nav a.active {
-    @apply bg-gray-100 text-gray-900 rounded-md;
+    @apply bg-gray-100 text-gray-950 rounded-md;
 }
 
 /* Other styles */
