@@ -10,10 +10,10 @@ const { pathname } = Astro.url;
     <Logo pathname={Astro.url.pathname} />
 
     <!-- Nav (desktop only) -->
-    <nav class="hidden md:flex min-h-[100%] flex-row items-center text-lg hover:text-gray-400">
-      <a href="/about" class={pathname === "/about" ? "active" : ""}>About</a>
-      <a href="/work" class={pathname === "/work" ? "active" : ""}>Work</a>
-      <a href="/insights" class={pathname === "/insights" ? "active" : ""}>Insights</a>
+    <nav class="navbar hidden md:flex flex-row items-center text-lg hover:text-gray-400">
+      <a href="/about">About</a>
+      <a href="/work">Work</a>
+      <a href="/insights">Insights</a>
     </nav>
 
     <!-- Email (desktop only) -->
@@ -46,4 +46,14 @@ const { pathname } = Astro.url;
     <a href="mailto:hello@acalvet.com" class="text-xl hover:underline">hello@acalvet.com</a>
   </div>
 </div>
+
+<script>
+  const currentPath = window.location.pathname;
+  document.querySelectorAll(".navbar a").forEach(link => {
+    const href = link.getAttribute("href");
+    if (currentPath === href || currentPath.startsWith(href + "/")) {
+      link.classList.add("active");
+    }
+  });
+</script>
 
