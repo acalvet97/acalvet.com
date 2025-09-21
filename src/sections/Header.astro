@@ -1,5 +1,7 @@
 ---
 import Logo from '../components/logo.astro';
+
+const { pathname } = Astro.url;
 ---
 
 <header class="sticky top-0 z-50 max-h-[80px] bg-white border-b border-gray-300 px-4 md:px-8">
@@ -8,10 +10,10 @@ import Logo from '../components/logo.astro';
     <Logo pathname={Astro.url.pathname} />
 
     <!-- Nav (desktop only) -->
-    <nav class="hidden md:flex flex-row gap-6 text-lg">
-      <a href="/about" class="hover:text-gray-400">About</a>
-      <a href="/work" class="hover:text-gray-400">Work</a>
-      <a href="/insights" class="hover:text-gray-400">Insights</a>
+    <nav class="hidden md:flex min-h-[100%] flex-row items-center text-lg hover:text-gray-400">
+      <a href="/about" class={pathname === "/about" ? "active" : ""}>About</a>
+      <a href="/work" class={pathname === "/work" ? "active" : ""}>Work</a>
+      <a href="/insights" class={pathname === "/insights" ? "active" : ""}>Insights</a>
     </nav>
 
     <!-- Email (desktop only) -->
@@ -38,9 +40,9 @@ import Logo from '../components/logo.astro';
   aria-label="Mobile navigation"
   class="fixed top-[80px] left-0 w-full h-auto bg-white border-b border-gray-300 transform -translate-y-full transition-transform duration-300 ease-in-out md:hidden z-40">
   <div class="p-6 flex flex-col space-y-6 text-lg">
-    <a href="/about" class="hover:text-gray-400">About</a>
-    <a href="/work" class="hover:text-gray-400">Work</a>
-    <a href="/insights" class="hover:text-gray-400">Insights</a>
+    <a href="/about">About</a>
+    <a href="/work">Work</a>
+    <a href="/insights">Insights</a>
     <a href="mailto:hello@acalvet.com" class="text-xl hover:underline">hello@acalvet.com</a>
   </div>
 </div>

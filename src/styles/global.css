@@ -16,7 +16,7 @@ body {
 
 
 .footer-nav-link {
-    @apply hover:underline;
+    @apply hover:text-gray-900;
 }
 
 nav a {
@@ -25,9 +25,17 @@ nav a {
 }
 
 header nav a {
-    @apply hover:text-gray-900;
+    @apply hover:text-gray-900 min-h-[100%];
+}
+
+header nav a.active {
+    @apply bg-gray-100 text-gray-900 rounded-md;
 }
 
 h2 {
     @apply text-2xl;
+}
+
+.button-disabled {
+    @apply opacity-40 cursor-not-allowed;
 }
