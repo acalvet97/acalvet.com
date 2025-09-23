@@ -8,7 +8,6 @@
   font-display: swap;
 }
 
-
 body {
   font-family: 'Geist', sans-serif;
   font-weight:300;
@@ -22,7 +21,7 @@ body {
 
 nav a {
     display: block;
-    padding: .5rem 1rem;
+    padding: .325rem 1rem;
 }
 
 header nav a {
@@ -36,7 +35,7 @@ header nav a.active {
 /* Other styles */
 
 h2 {
-    @apply text-2xl;
+    @apply text-2xl tracking-tight font-medium text-gray-950;
 }
 
 .button-disabled {
