@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/DefaultLayout.astro';
+import Header from '../sections/Header.astro';
+import Footer from '../sections/Footer.astro';
+import PageHeading from '../components/pageHeading.astro';
+import InsightArticle from '../components/insightArticle.astro';
+---
+
+<Layout title="Insights" description="Thoughts on product, people and the dynamics of modern work.">
+  <Header />
+  <main class="max-w-full min-h-[calc(100vh-165px)] flex flex-col justify-start items-center px-4 sm:px-6 lg:px-8">
+    <PageHeading pageH1="Insights" pageSubtitle="Thoughts on product, people and the dynamics of modern work."/>
+    <ul class="w-full max-w-7xl flex flex-col gap-4">
+      <InsightArticle />
+    </ul>
+  </main>
+  <Footer />
+</Layout>

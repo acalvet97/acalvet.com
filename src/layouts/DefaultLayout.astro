@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css"
 import {fixedTitle} from "../consts/fixedTitle.ts"
+import Header from "../sections/Header.astro"
+import Footer from "../sections/Footer.astro"
 
 interface Props {
   title: string
@@ -35,7 +37,9 @@ const {
 
 	</head>
 	<body class="bg-gray-50">
+		<Header />
 		<slot />
 		<script src="../scripts/menu.ts"></script>
+		<Footer />
 	</body>
 </html>

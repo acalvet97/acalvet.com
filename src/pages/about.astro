@@ -1,7 +1,5 @@
 ---
-import Header from '../sections/Header.astro'
 import Layout from '../layouts/DefaultLayout.astro'
-import Footer from '../sections/Footer.astro'
 import PageHeading from '../components/pageHeading.astro'
 
 const title = 'Albert Calvet - About Me'
@@ -13,12 +11,10 @@ const pageSubtitle = description
 ---
 
 <Layout title={title} description={description}>
-    <Header />
     <main class="max-w-full min-h-[calc(100vh-165px)] flex flex-col justify-center items-center px-4 md:px-8]">
       <PageHeading pageH1={pageH1} pageSubtitle={pageSubtitle}/>
       <div>
         <p>I'm a digital product passionate based in Barcelona, currently leading the web development team at VILAX.</p>
       </div>
     </main>
-    <Footer />
 </Layout>
