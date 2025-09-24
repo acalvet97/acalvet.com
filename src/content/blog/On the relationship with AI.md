@@ -1,7 +1,7 @@
 ---
 title: "On the relationship with AI"
 description: "In the age of AI, this article reflects on preserving the human touch: thinking, learning, and creating beyond measurable productivity. It highlights the value of time, reflection, and the unquantifiable experiences that give life meaning."
-pubDate: 2025-08-15
+pubDate: 2025-09-15
 readTime: 10
 author: "Albert Calvet"
 tags: ["AI"]

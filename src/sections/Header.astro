@@ -4,7 +4,7 @@ import Logo from '../components/logo.astro';
 const { pathname } = Astro.url;
 ---
 
-<header class="sticky top-0 z-50 max-h-[80px] bg-white border-b border-gray-300 px-4 md:px-8">
+<header class="sticky top-0 z-50 max-h-[80px] bg-white border-b border-gray-200 px-4 md:px-8">
   <div class="max-w-7xl mx-auto flex items-center justify-between h-20">
     <!-- Logo -->
     <Logo pathname={Astro.url.pathname} />
@@ -17,7 +17,7 @@ const { pathname } = Astro.url;
     </nav>
 
     <!-- Email (desktop only) -->
-    <a href="mailto:hello@acalvet.com" class="hidden md:block text-base border border-gray-200 rounded-full px-4 py-2 hover:border-gray-400">
+    <a href="mailto:hello@acalvet.com" class="hidden md:block text-base border border-gray-300 rounded-full px-4 py-2 hover:border-gray-400">
       hello@acalvet.com
     </a>
 

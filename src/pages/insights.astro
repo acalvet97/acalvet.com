@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/DefaultLayout.astro';
 import PageHeading from '../components/pageHeading.astro';
+import InsightArticle from '../components/insightArticle.astro';
 
 import { getCollection } from 'astro:content';
 const posts = await getCollection('blog');
@@ -18,16 +19,8 @@ const pageSubtitle = description;
     <PageHeading pageH1={pageH1} pageSubtitle={pageSubtitle}/>
     {posts.length === 0 && <p>No posts found.</p>}
     {posts.length > 0 && 
-      <ul class="w-full max-w-7xl flex flex-col gap-4">
-        {posts.map((post) => (
-          <li class="flex flex-col gap-2 mb-4">
-            <a href={`/insights/${post.slug}`} class="flex flex-col gap-2">
-            <h2 class="text-2xl font-normal text-gray-950">{post.data.title}</h2>
-            <p class="text-gray-600 text-sm">{post.data.readTime} minutes read</p>
-            <p class="text-gray-950 text-base hover:underline">Read article</p>
-            </a>
-          </li>
-        ))}
+      <ul class="w-full max-w-7xl grid grid-cols-1 xl:grid-cols-3">
+      <InsightArticle />
       </ul>
     }
   </main>
