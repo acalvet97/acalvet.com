@@ -47,7 +47,7 @@ h2 {
 }
 
 :root {
-  --container-max: 80rem;          /* Tailwind w-7xl */
+  --container-max: calc(80rem + 1px);          /* Tailwind w-7xl */
   --page-side-padding: 2rem;      /* px-4 = 1rem each side */
   --line-color: oklch(92.8% 0.006 264.531); /* red for testing */
   --line-width: 1px;
@@ -118,7 +118,7 @@ body::before {
       linear-gradient(to bottom, var(--line-color), var(--line-color));
 
     background-size: var(--line-width) 100%, var(--line-width) 100%, var(--line-width) 100%;
-    background-position: left top, 50% top, calc(100% - 1px) top;
+    background-position: left top, calc(50% - 0.5px) top, calc(100% - 1px) top;
   }
 }
 
