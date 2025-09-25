@@ -45,3 +45,77 @@ h2 {
 .grid-layout {
     @apply max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
 }
+
+:root {
+  --container-max: 80rem;          /* Tailwind w-7xl */
+  --page-side-padding: 2rem;      /* px-4 = 1rem each side */
+  --line-color: oklch(92.8% 0.006 264.531); /* red for testing */
+  --line-width: 1px;
+  --dash-length: 6px;             /* dash length */
+  --gap-length: 6px;              /* gap length */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(var(--container-max), calc(100% - var(--page-side-padding)));
+  pointer-events: none;
+  z-index: 0;
+
+  background-image:
+    /* left solid */
+    linear-gradient(to bottom, var(--line-color), var(--line-color)),
+    /* dashed inner 1 */
+    repeating-linear-gradient(
+      to bottom,
+      var(--line-color),
+      var(--line-color) var(--dash-length),
+      transparent var(--dash-length),
+      transparent calc(var(--dash-length) + var(--gap-length))
+    ),
+    /* dashed inner 2 */
+    repeating-linear-gradient(
+      to bottom,
+      var(--line-color),
+      var(--line-color) var(--dash-length),
+      transparent var(--dash-length),
+      transparent calc(var(--dash-length) + var(--gap-length))
+    ),
+    /* right solid */
+    linear-gradient(to bottom, var(--line-color), var(--line-color));
+  
+  background-repeat: no-repeat;
+  background-size:
+    var(--line-width) 100%,
+    var(--line-width) 100%,
+    var(--line-width) 100%,
+    var(--line-width) 100%;
+  background-position:
+    left top,
+    calc(33.3333% - 0.5px) top,
+    calc(66.6667% - 0.5px) top,
+    calc(100% - 1px) top;
+}
+
+@media (max-width: 768px) {
+  body::before {
+    background-image:
+      /* left solid */
+      linear-gradient(to bottom, var(--line-color), var(--line-color)),
+      /* right solid */
+      linear-gradient(to bottom, var(--line-color), var(--line-color));
+    background-size: var(--line-width) 100%, var(--line-width) 100%;
+    background-position: left top, calc(100% - 1px) top;
+  }
+}
+
+/* make sure your page content sits above the overlay */
+main, .site, .your-main-wrapper {
+  position: relative;
+  z-index: 10;
+}
+
