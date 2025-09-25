@@ -51,13 +51,13 @@ h2 {
   --page-side-padding: 2rem;      /* px-4 = 1rem each side */
   --line-color: oklch(92.8% 0.006 264.531); /* red for testing */
   --line-width: 1px;
-  --dash-length: 6px;             /* dash length */
-  --gap-length: 6px;              /* gap length */
+  --dash-length: 4px;             /* dash length */
+  --gap-length: 4px;              /* gap length */
 }
 
 body::before {
   content: "";
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 50%;
