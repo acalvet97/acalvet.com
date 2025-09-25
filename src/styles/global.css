@@ -106,10 +106,19 @@ body::before {
     background-image:
       /* left solid */
       linear-gradient(to bottom, var(--line-color), var(--line-color)),
+      /* middle dashed */
+      repeating-linear-gradient(
+        to bottom,
+        var(--line-color),
+        var(--line-color) var(--dash-length),
+        transparent var(--dash-length),
+        transparent calc(var(--dash-length) + var(--gap-length))
+      ),
       /* right solid */
       linear-gradient(to bottom, var(--line-color), var(--line-color));
-    background-size: var(--line-width) 100%, var(--line-width) 100%;
-    background-position: left top, calc(100% - 1px) top;
+
+    background-size: var(--line-width) 100%, var(--line-width) 100%, var(--line-width) 100%;
+    background-position: left top, 50% top, calc(100% - 1px) top;
   }
 }
 
