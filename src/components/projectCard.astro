@@ -5,17 +5,17 @@ const props = Astro.props as Project;
 const { title, description, year, link, tags } = props;
 ---
 
-<article class="project-card flex flex-col gap-0 bg-white border border-gray-200 rounded-lg">
+<article class="project-card flex flex-col gap-0 bg-white border border-zinc-200 rounded-lg">
   <div class="p-4 flex flex-col gap-4 background-white">
-    <h2 class="project-card__title text-2xl font-normal text-gray-950">{title}</h2>
-    <p class="text-gray-600 text-base">{description}</p>
+    <h2 class="project-card__title text-2xl font-normal text-zinc-950">{title}</h2>
+    <p class="text-zinc-600 text-base">{description}</p>
     {link && (
       <p>
         <a
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          class="mt-[.75rem] px-[1.5rem] py-[.875rem] border rounded-lg border-gray-300 bg-gray-950 text-white hover:bg-gray-800 inline-flex items-center gap-2 button-disabled"
+          class="mt-[.75rem] px-[1.5rem] py-[.875rem] border rounded-lg border-zinc-300 bg-zinc-950 text-white hover:bg-zinc-800 inline-flex items-center gap-2 button-disabled"
         >
           View Projects
           <span class="material-icons">open_in_new</span>
@@ -24,10 +24,10 @@ const { title, description, year, link, tags } = props;
     )}
   </div>
 
-  <div class="p-4 border-t border-gray-200">
+  <div class="p-4 border-t border-zinc-200">
     {tags && tags.length > 0 && (
       <ul class="tags flex flex-row gap-2">
-        {tags.map(tag => <li class="bg-gray-200 px-2 py-1 inline-block text-sm rounded-sm text-gray-700">{tag}</li>)}
+        {tags.map(tag => <li class="bg-zinc-200 px-2 py-1 inline-block text-sm rounded-sm text-zinc-700">{tag}</li>)}
       </ul>
     )}
   </div>
