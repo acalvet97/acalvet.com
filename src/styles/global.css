@@ -123,8 +123,8 @@ body::before {
 }
 
 /* make sure your page content sits above the overlay */
-main, footer {
+/*main, footer {
   position: relative;
   z-index: 10;
-}
+}*/
 
