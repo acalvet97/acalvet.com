@@ -118,7 +118,7 @@ body::before {
       linear-gradient(to bottom, var(--line-color), var(--line-color));
 
     background-size: var(--line-width) 100%, var(--line-width) 100%, var(--line-width) 100%;
-    background-position: left top, calc(50% - 0.5px) top, calc(100% - 1px) top;
+    background-position: left top, calc(50%) top, calc(100% - 1px) top;
   }
 }
 
