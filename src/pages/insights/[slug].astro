@@ -18,19 +18,20 @@ const { Content } = await post.render();
 ---
 
 <Layout title={post.data.title}>
-  <main class="min-h-[calc(100vh-160px)] max-w-full md:max-w-4xl mx-auto px-8 lg:px-16 py-16">
-    <!-- Title -->
-    <h1 class="text-3xl sm:text-4xl font-medium tracking-tight mb-2">{post.data.title}</h1>
-    
-    <!-- Date -->
-    <p class="text-zinc-500 text-sm mb-4">
-      {post.data.pubDate.toLocaleDateString()}
-    </p>
-
-    <!-- Content -->
-    <article class="content prose max-w-none mt-6">
-      <Content />
-    </article>
+  <main class="min-h-[calc(100vh-160px)] max-w-full md:max-w-4xl mx-auto px-4 lg:px-16">
+    <div class="border-x border-zinc-200 md:border-0 bg-zinc-50 md:bg-transparent py-16 px-4">
+      <!-- Title -->
+      <h1 class="text-3xl sm:text-4xl font-medium tracking-tight mb-2">{post.data.title}</h1>
+      
+      <!-- Date -->
+      <p class="text-zinc-500 text-sm mb-4">
+        {post.data.pubDate.toLocaleDateString()}
+      </p>
+      <!-- Content -->
+      <article class="content prose max-w-none mt-6">
+        <Content />
+      </article>
+    </div>
   </main>
 </Layout>
 
