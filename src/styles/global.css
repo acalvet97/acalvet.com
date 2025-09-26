@@ -51,8 +51,8 @@ h2 {
   --page-side-padding: 2rem;      /* px-4 = 1rem each side */
   --line-color: oklch(92% 0.004 286.32);
   --line-width: 1px;
-  --dash-length: 4px;
-  --gap-length: 4px;
+  --dash-length: 8px;
+  --gap-length: 8px;
 }
 
 body::before {
