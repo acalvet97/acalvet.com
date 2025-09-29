@@ -29,9 +29,9 @@ const { pathname } = Astro.url;
       id="menu-toggle" 
       aria-label="Toggle menu"
       class="md:hidden relative w-6 h-5 z-50 mr-1">
-      <span class="absolute top-0 left-0 w-6 h-[2px] bg-black transition-all duration-300 ease-in-out"></span>
-      <span class="absolute top-[8px] left-0 w-6 h-[2px] bg-black transition-all duration-300 ease-in-out"></span>
-      <span class="absolute top-[16px] left-0 w-6 h-[2px] bg-black transition-all duration-300 ease-in-out"></span>
+      <span class="absolute top-0 left-0 w-6 h-[2px] bg-black dark:bg-zinc-50 transition-all duration-300 ease-in-out"></span>
+      <span class="absolute top-[8px] left-0 w-6 h-[2px] bg-black dark:bg-zinc-50 transition-all duration-300 ease-in-out"></span>
+      <span class="absolute top-[16px] left-0 w-6 h-[2px] bg-black dark:bg-zinc-50 transition-all duration-300 ease-in-out"></span>
     </button>
   </div>
 </header>
@@ -41,8 +41,8 @@ const { pathname } = Astro.url;
   id="mobile-menu"
   role="navigation"
   aria-label="Mobile navigation"
-  class="fixed top-[80px] left-0 w-full h-auto bg-white border-b border-zinc-300 transform -translate-y-full transition-transform duration-300 ease-in-out md:hidden z-40">
-  <div class="p-6 flex flex-col items-left space-y-6 text-lg">
+  class="fixed top-[80px] left-0 w-full h-auto bg-white dark:bg-zinc-950 border-b border-zinc-300 dark:border-zinc-700 transform -translate-y-full transition-transform duration-300 ease-in-out md:hidden z-40">
+  <div class="p-6 flex flex-col items-left space-y-6 text-lg text-zinc-950 dark:text-zinc-50">
     <a href="/about">About</a>
     <a href="/work">Work</a>
     <a href="/insights">Insights</a>
