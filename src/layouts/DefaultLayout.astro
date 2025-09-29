@@ -20,7 +20,7 @@ const {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,11 +32,22 @@ const {
     	{robots && <meta name="robots" content={robots} />}
 
 		<!-- Material Icon -->
-
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+		<script>
+		(function() {
+			try {
+			const stored = localStorage.getItem('theme');
+			if (stored === 'dark') document.documentElement.classList.add('dark');
+			else document.documentElement.classList.remove('dark');
+			} catch {}
+		})();
+		</script>
+
 
 	</head>
-	<body class="relative min-h-screen bg-zinc-50">
+	<body class="relative min-h-screen bg-zinc-50 dark:bg-zinc-950">
 		<Header />
 		<slot />
 		<script src="../scripts/menu.ts"></script>

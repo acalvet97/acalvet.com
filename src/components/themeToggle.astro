@@ -1,0 +1,76 @@
+<div id="theme-toggle" class="flex gap-0 p-0 justify-center items-center rounded-full border border-zinc-200 dark:border-zinc-800">
+  <button data-theme="light" class="p-2 rounded-full transition flex items-center">
+    <span class="material-symbols-outlined !text-[1rem]">light_mode</span>
+  </button>
+  <button data-theme="dark" class="p-2 rounded-full transition flex items-center">
+    <span class="material-symbols-outlined !text-[1rem]">dark_mode</span>
+  </button>
+  <button data-theme="system" class="p-2 rounded-full transition flex items-center">
+    <span class="material-symbols-outlined !text-[1rem]">devices</span>
+  </button>
+</div>
+
+<script is.inline>
+  const container = document.getElementById('theme-toggle');
+  const buttons = container.querySelectorAll('button');
+
+  // Get current theme from localStorage or system
+  function getCurrentTheme() {
+    return localStorage.getItem('theme') || 'system';
+  }
+
+  // Apply the theme to <html>
+  function applyTheme(theme) {
+    const html = document.documentElement;
+    if (theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      html.classList.add('dark');
+    } else {
+      html.classList.remove('dark');
+    }
+  }
+
+  // Update button UI
+  // In the same themeToggle.astro file
+  function updateUI(currentTheme) {
+    buttons.forEach(btn => {
+      if (btn.dataset.theme === currentTheme) {
+        btn.classList.add('bg-zinc-200', 'text-zinc-950', '!dark:text-zinc-50', 'dark:bg-zinc-800', 'dark:text-zinc-50');
+        btn.classList.remove('bg-transparent', 'text-zinc-400');
+      } else {
+        btn.classList.remove('bg-zinc-200', 'text-zinc-950', '!dark:zinc-50', 'dark:bg-zinc-800', 'dark:text-zinc-50');
+        btn.classList.add('bg-transparent', 'text-zinc-400');
+      }
+    });
+  }
+
+
+  // Set new theme
+  function setTheme(newTheme) {
+    localStorage.setItem('theme', newTheme);
+    applyTheme(newTheme);
+    updateUI(newTheme);
+    document.dispatchEvent(new CustomEvent('theme:change', { detail: { theme: newTheme }}));
+  }
+
+  // Initialize
+  const currentTheme = getCurrentTheme();
+  applyTheme(currentTheme);
+  updateUI(currentTheme);
+
+  // Button click listeners
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => setTheme(btn.dataset.theme));
+  });
+
+  // Listen for system preference changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    const theme = getCurrentTheme();
+    if (theme === 'system') {
+      applyTheme('system');
+      updateUI('system');
+    }
+  });
+
+  // Optional: allow console testing
+  window.themeToggle = { setTheme, getCurrentTheme };
+</script>
