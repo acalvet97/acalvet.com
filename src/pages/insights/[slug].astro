@@ -24,11 +24,11 @@ const { Content } = await post.render();
       <h1 class="text-3xl sm:text-4xl font-medium tracking-tight mb-2">{post.data.title}</h1>
       
       <!-- Date -->
-      <p class="text-zinc-500 text-sm mb-4">
+      <p class="text-zinc-500 dark:text-zinc-400 text-sm mb-4">
         {post.data.pubDate.toLocaleDateString()}
       </p>
       <!-- Content -->
-      <article class="content prose max-w-none mt-6">
+      <article class="content prose max-w-none mt-6 dark:text-zinc-400">
         <Content />
       </article>
     </div>

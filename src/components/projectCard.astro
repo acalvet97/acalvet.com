@@ -5,29 +5,29 @@ const props = Astro.props as Project;
 const { title, description, year, link, tags } = props;
 ---
 
-<article class="project-card flex flex-col gap-0 bg-white border border-zinc-200 rounded-lg">
-  <div class="p-4 flex flex-col gap-4 background-white">
+<article class="project-card flex flex-col gap-0 bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-600 rounded-lg">
+  <div class="p-4 flex flex-col gap-4">
     <h2 class="project-card__title text-2xl font-normal text-zinc-950">{title}</h2>
-    <p class="text-zinc-600 text-base">{description}</p>
+    <p class="text-zinc-600 dark:text-zinc-400 text-base">{description}</p>
     {link && (
       <p>
         <a
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          class="mt-[.75rem] px-[1.5rem] py-[.875rem] border rounded-lg border-zinc-300 bg-zinc-950 text-white hover:bg-zinc-800 inline-flex items-center gap-2 button-disabled"
+          class="mt-[.75rem] px-[1.5rem] py-[.875rem] border rounded-lg border-zinc-300 bg-zinc-950 dark:bg-white text-white dark:text-zinc-950 hover:bg-zinc-800 dark:hover:bg-zinc-100 inline-flex items-center gap-2 button-disabled"
         >
           View Project
-          <span class="material-icons">open_in_new</span>
+          <span class="material-icons !text-[1.25rem]">open_in_new</span>
         </a>
       </p>
     )}
   </div>
 
-  <div class="p-4 border-t border-zinc-200">
+  <div class="p-4 border-t border-zinc-200 dark:border-zinc-600">
     {tags && tags.length > 0 && (
       <ul class="tags flex flex-row gap-2">
-        {tags.map(tag => <li class="bg-zinc-200 px-2 py-1 inline-block text-sm rounded-sm text-zinc-700">{tag}</li>)}
+        {tags.map(tag => <li class="bg-zinc-200 dark:bg-zinc-700 px-2 py-1 inline-block text-sm rounded-sm text-zinc-700 dark:text-zinc-100">{tag}</li>)}
       </ul>
     )}
   </div>
