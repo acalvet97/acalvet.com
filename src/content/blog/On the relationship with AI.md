@@ -5,7 +5,7 @@ pubDate: 2025-09-15
 readTime: 10
 author: "Albert Calvet"
 tags: ["AI"]
-image: "/images/blog/my-first-post.jpg"
+image: "/img/blog-ftd/the-myth-of-theuth.jpg"
 draft: false
 ---
 
