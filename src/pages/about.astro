@@ -13,11 +13,11 @@ const pageSubtitle = description
 <Layout title={title} description={description}>
     <main class="max-w-full min-h-[calc(100vh-165px)] flex flex-col justify-center items-center px-4 md:px-8]">
       <PageHeading pageH1={pageH1} pageSubtitle={pageSubtitle}/>
-      <section class="max-w-7xl grid grid-cols-1 md:grid-cols-3 py-16">
+      <section class="max-w-7xl grid grid-cols-1 md:grid-cols-3 py-16 gap-y-16 md:gap-y-0">
         <div class="col-span 1 px-4">
           <h2>What I'm learning so far</h2>
         </div>
-        <div class="col-span-2 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-y-16">
+        <div class="col-span-2 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-y-8 md:gap-y-16">
           <div class="learned_item flex flex-col gap-4 pl-4 pr-8">
             <h3 class="relative text-xl font-medium text-zinc-950 dark:text-zinc-50">Users have the answer</h3>
             <p class="text-zinc-600 dark:text-zinc-400">Listen before you build. The best products emerge from real problems, not assumptions.</p>
