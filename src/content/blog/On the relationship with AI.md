@@ -6,6 +6,7 @@ readTime: 10
 author: "Albert Calvet"
 tags: ["AI"]
 image: "/img/blog-ftd/the-myth-of-theuth.jpg"
+substackLink: "https://substack.com/inbox/post/174934549"
 draft: false
 ---
 

@@ -8,6 +8,7 @@ const blogCollection = defineCollection({
     readTime: z.number().optional(),
     description: z.string().optional(),
     image: z.string().optional(),
+    substackLink: z.string().url().optional(),
     
     // Add other fields as needed
   })
