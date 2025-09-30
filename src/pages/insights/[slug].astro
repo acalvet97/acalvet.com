@@ -18,7 +18,7 @@ const { Content } = await post.render();
 
 <Layout title={post.data.title}>
   <main class="min-h-[calc(100vh-160px)] max-w-full md:max-w-4xl mx-auto px-4 lg:px-16">
-    <div class="border-x border-zinc-200 dark:border-zinc-700 md:border-0 bg-zinc-50 dark:bg-zinc-950 md:bg-transparent dark:md:bg-transparent py-16 px-4">
+    <div class="border-x border-zinc-200 dark:border-zinc-700 md:border-0 bg-zinc-50 dark:bg-zinc-950 md:bg-transparent dark:md:bg-transparent py-16">
       {/* Substack link at the bottom */}
       {post.data.substackLink && (
         <p class="text-center text-zinc-600 dark:text-zinc-400">
@@ -44,14 +44,14 @@ const { Content } = await post.render();
       </div>
 
       <!-- Title -->
-      <h1 class="text-3xl sm:text-4xl font-medium tracking-tight mb-2 text-zinc-950 dark:text-zinc-50">{post.data.title}</h1>
+      <h1 class="text-3xl sm:text-4xl font-medium tracking-tight mb-2 text-zinc-950 dark:text-zinc-50 px-4">{post.data.title}</h1>
       
       <!-- Date -->
-      <p class="text-zinc-500 dark:text-zinc-400 text-sm mb-4">
+      <p class="text-zinc-500 dark:text-zinc-400 text-sm mb-4 px-4">
         {post.data.pubDate.toLocaleDateString()}
       </p>
       <!-- Content -->
-      <article class="content prose max-w-none mt-6 text-base lg:text-lg text-zinc-700 dark:text-zinc-300">
+      <article class="content prose max-w-none mt-6 text-base lg:text-lg text-zinc-700 dark:text-zinc-300 px-4">
         <Content />
       </article>
     </div>

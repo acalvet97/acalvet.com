@@ -139,10 +139,11 @@ main, footer {
 
 .learned_item h3::before {
   content:'';
-  height: 1.5rem;
+  height: theme('fontSize.xl');
   width: 1px;
   left: -1rem;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   position: absolute;
   background-color: black;
 }
