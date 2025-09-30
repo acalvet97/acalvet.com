@@ -135,3 +135,16 @@ main, footer {
   z-index: 10;
 }
 
+.learned_item h3::before {
+  content:'';
+  height: 1.5rem;
+  width: 1px;
+  left: -1rem;
+  top: 0;
+  position: absolute;
+  background-color: black;
+}
+
+html.dark .learned_item h3::before {
+  background-color: white;
+}
