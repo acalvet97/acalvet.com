@@ -19,7 +19,7 @@ const pageSubtitle = description;
     <PageHeading pageH1={pageH1} pageSubtitle={pageSubtitle}/>
     {posts.length === 0 && <p>No posts found.</p>}
     {posts.length > 0 && 
-      <ul class="w-full max-w-7xl grid grid-cols-1 xl:grid-cols-3 pb-16 gap-8 md:gap-0">
+      <ul class="w-full max-w-7xl z-1 grid grid-cols-1 xl:grid-cols-3 pb-16 gap-8 md:gap-0">
       <InsightArticle />
       </ul>
     }
