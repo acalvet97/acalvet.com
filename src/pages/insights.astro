@@ -15,7 +15,7 @@ const pageSubtitle = description;
 ---
 
 <Layout title={title} description={description}>
-  <main class="max-w-full min-h-[calc(100vh-165px)] flex flex-col justify-start items-center px-4 sm:px-6 lg:px-8">
+  <main class="grid-guide max-w-full min-h-[calc(100vh-165px)] flex flex-col justify-start items-center px-4 sm:px-6 lg:px-8">
     <PageHeading pageH1={pageH1} pageSubtitle={pageSubtitle}/>
     {posts.length === 0 && <p>No posts found.</p>}
     {posts.length > 0 && 

@@ -61,7 +61,7 @@ html.dark {
   --line-color: oklch(27.4% 0.006 286.033); /* change to your desired dark color */
 }
 
-body::before {
+.grid-guide::before {
   content: "";
   position: absolute;
   top: 0;
@@ -109,7 +109,7 @@ body::before {
 }
 
 @media (max-width: 768px) {
-  body::before {
+  .grid-guide::before {
     background-image:
       /* left solid */
       linear-gradient(to bottom, var(--line-color), var(--line-color)),
