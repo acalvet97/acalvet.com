@@ -47,3 +47,20 @@ const pageSubtitle = description
       </section>
     </main>
 </Layout>
+
+<style>
+  .learned_item h3::before {
+  content:'';
+  height: theme('fontSize.xl');
+  width: 1px;
+  left: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  background-color: black;
+}
+
+html.dark .learned_item h3::before {
+  background-color: white;
+}
+</style>
