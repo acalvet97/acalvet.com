@@ -13,6 +13,6 @@ export const projects: Project[] = [
     description: "A two-sided marketplace connecting basketball clubs with coaches, focused on formative, non-professional basketball in Spain.",
     year: 2025,
     link: "#",
-    tags: ["Next.js", "React", "PostgresSQL"]
+    tags: ["Next.js", "PostgresSQL"]
   }
 ];
