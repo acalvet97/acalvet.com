@@ -71,6 +71,7 @@ body::before {
   width: min(var(--container-max), calc(100% - var(--page-side-padding) + 1px));
   pointer-events: none;
   z-index: 0;
+  height: 100vh;
   background-attachment: local;
 
   background-image:
