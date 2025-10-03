@@ -71,7 +71,6 @@ body::before {
   width: min(var(--container-max), calc(100% - var(--page-side-padding) + 1px));
   pointer-events: none;
   z-index: 0;
-  height: 100%;
   background-attachment: local;
 
   background-image:
@@ -104,8 +103,8 @@ body::before {
     var(--line-width) 100%;
   background-position:
     left top,
-    calc(33.3333% - 0.5px) top,
-    calc(66.6667% - 0.5px) top,
+    calc(33.3333%) top,
+    calc(66.6667%) top,
     calc(100% - 1px) top;
 }
 
@@ -126,7 +125,7 @@ body::before {
       linear-gradient(to bottom, var(--line-color), var(--line-color));
 
     background-size: var(--line-width) 100%, var(--line-width) 100%, var(--line-width) 100%;
-    background-position: left top, calc(50%) top, calc(100% - 1px) top;
+    background-position: left top, 50% top, calc(100% - 1px) top;
   }
 }
 
