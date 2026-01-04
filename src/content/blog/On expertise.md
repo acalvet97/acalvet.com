@@ -6,7 +6,7 @@ readTime: 5
 author: "Albert Calvet"
 tags: ["Expertise"]
 image: "/img/blog-ftd/wanderer-above-the-sea-of-fog.jpg"
-substackLink: "https://substack.com/inbox/post/174934549"
+substackLink: "https://substack.com/home/post/p-183428714"
 draft: false
 ---
 
