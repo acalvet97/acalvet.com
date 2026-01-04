@@ -1,7 +1,7 @@
 ---
 title: "On expertise"
 description: "This article reflects on what expertise means today, beyond knowledge accumulation. It explores judgment, responsibility, and the ability to move through uncertainty, where knowing more is less important than knowing what matters."
-pubDate: 2026-01-4
+pubDate: "2026-01-04"
 readTime: 5
 author: "Albert Calvet"
 tags: ["Expertise"]
