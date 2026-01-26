@@ -36,11 +36,11 @@ At this point, it is hard not to connect this shift in how knowledge is generate
 
 To understand Pollock’s creative process is to understand the need to expose a product to the world: to launch incomplete versions, functional prototypes, deliberately fragile systems that exist only to be put in contact with real use. There are aspects of the problem a product is trying to solve that reveal themselves only when someone actually interacts with what has been built.
 
-A large part of learning in product development happens when users use a system in unexpected ways, when certain features take on an unforeseen centrality, or when others—designed to be useful—turn out to be irrelevant. In many products, what they really are is discovered late.
+A large part of learning in product development happens when users use a system in unexpected ways, when certain features take on an unforeseen centrality, or when others, designed to be useful, turn out to be irrelevant. In many products, what they really are is discovered late.
 
 From this perspective, many successful products are not the faithful execution of an initial idea, but the result of an ongoing negotiation with reality. Each iteration changes the product and, at the same time, the team’s understanding of it. Knowledge is generated as a direct consequence of doing.
 
-This logic was later formalized in approaches such as those proposed by Eric Ries, who describes product development as a continuous loop of action, measurement, and learning—where knowledge is produced through contact with reality.
+This logic was later formalized in approaches such as those proposed by Eric Ries, who describes product development as a continuous loop of action, measurement, and learning, where knowledge is produced through contact with reality.
 
 Working this way inevitably generates discomfort, because it requires giving up the sense of control that planning and early clarity provide. Yet that discomfort, born of uncertainty, is a necessary condition for creating something that is not fully defined from the outset.
 
@@ -58,6 +58,6 @@ When uncertainty is eliminated too early, what is lost is not only flexibility, 
 
 There is a constant temptation, especially in technical, creative, or strategic contexts, to confuse clarity with progress. To believe that moving forward means reducing uncertainty as quickly as possible, fixing meanings, closing options. Yet both in Pollock’s work and in the complex systems we build today, understanding rarely precedes action.
 
-Accepting this does not mean romanticizing chaos or abandoning responsibility. It means recognizing that there are moments in a process when trying to understand everything in advance is counterproductive—moments when the only way to discover what we are building is to sustain the act of doing long enough for something to start responding.
+Accepting this does not mean romanticizing chaos or abandoning responsibility. It means recognizing that there are moments in a process when trying to understand everything in advance is counterproductive, moments when the only way to discover what we are building is to sustain the act of doing long enough for something to start responding.
 
 Perhaps the real risk is not acting without knowing exactly what we are doing, but refusing to act until we feel that we do. If Pollock had waited to fully understand his painting before starting, he would not have painted a single mark. One can’t help but wonder how many things we fail to build today for the very same reason.
