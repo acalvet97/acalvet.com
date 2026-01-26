@@ -1,6 +1,6 @@
 ---
 title: "On what happens"
-description: "This article reflects on what expertise means today, beyond knowledge accumulation. It explores judgment, responsibility, and the ability to move through uncertainty, where knowing more is less important than knowing what matters."
+description: "This article reflects on creation and uncertainty, and on how meaning often emerges through action rather than prior understanding. It explores what happens when we allow processes to unfold before we fully know what we are building."
 pubDate: "2026-01-26"
 readTime: 8
 author: "Albert Calvet"
@@ -20,7 +20,7 @@ His paintings do not convey a closed idea or a specific emotion. They convey exp
 
 ## Action Before Understanding
 
-In Ex Machina, there is a key scene that captures the core idea of the entire film. Caleb begins to question not only Ava’s behavior, but the very method by which she has been created. He tries to find a clear connection between Nathan’s intention and the result of his creation. At that point, Nathan asks Caleb what would have happened if Jackson Pollock had stopped before starting, saying: “I can’t paint anything unless I know exactly what I’m doing.” Caleb replies that, in that case, Pollock would not have painted a single line.
+In Ex Machina, there is a key scene that captures the core idea of the entire film. Caleb begins to question not only Ava’s behavior, but the very method by which she has been created. He tries to find a clear connection between Nathan’s intention and the result of his creation. At that point, Nathan asks Caleb what would have happened if Jackson Pollock had stopped before starting, saying: “I can’t paint anything unless I know exactly why I'm doing it.” Caleb replies that, in that case, Pollock never would have made a single mark.
 
 The line is not really about painting. It points to something more fundamental: the impossibility of creating (of building intelligence, in that context) if we demand total understanding before acting.
 
@@ -60,4 +60,4 @@ There is a constant temptation, especially in technical, creative, or strategic 
 
 Accepting this does not mean romanticizing chaos or abandoning responsibility. It means recognizing that there are moments in a process when trying to understand everything in advance is counterproductive—moments when the only way to discover what we are building is to sustain the act of doing long enough for something to start responding.
 
-Perhaps the real risk is not acting without knowing exactly what we are doing, but refusing to act until we feel that we do. If Pollock had waited to fully understand his painting before starting, he would not have painted a single line. One can’t help but wonder how many things we fail to build today for the very same reason.
+Perhaps the real risk is not acting without knowing exactly what we are doing, but refusing to act until we feel that we do. If Pollock had waited to fully understand his painting before starting, he would not have painted a single mark. One can’t help but wonder how many things we fail to build today for the very same reason.
