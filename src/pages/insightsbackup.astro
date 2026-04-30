@@ -3,7 +3,7 @@ import Layout from '../layouts/DefaultLayout.astro';
 import PageHeading from '../components/pageHeading.astro';
 import InsightArticle from '../components/insightArticle.astro';
 
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 const posts = await getCollection('blog');
 
 const title = 'Albert Calvet - Insights'
@@ -20,7 +20,9 @@ const pageSubtitle = description;
     {posts.length === 0 && <p>No posts found.</p>}
     {posts.length > 0 && 
       <ul class="w-full max-w-7xl grid grid-cols-1 xl:grid-cols-3 pb-16 gap-8 md:gap-0">
-      <InsightArticle />
+        {posts.map((post: CollectionEntry<'blog'>) => (
+          <InsightArticle post={post} />
+        ))}
       </ul>
     }
   </main>
