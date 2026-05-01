@@ -2,12 +2,12 @@
 import type { Project } from "../types/project.ts";
 
 const props = Astro.props as Project;
-const { title, description, year, link, tags } = props;
+const { title, logoUrl, description, year, link, tags, imageUrl } = props;
 ---
 
-<article class="project-card flex flex-col gap-0 bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-600 rounded-lg">
-  <div class="p-4 flex flex-col gap-4">
-    <h2 class="project-card__title text-2xl font-normal text-zinc-950">{title}</h2>
+<article class="project-item col-span-3 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-0">
+  <div class="order-2 flex flex-col gap-6 justify-center md:order-1 md:col-span-1 md:pr-4">
+    <img src={logoUrl} alt="Project Logo" class="w-20 md:w-24 h-auto">
     <p class="text-zinc-600 dark:text-zinc-400 text-base">{description}</p>
     {link && (
       <p>
@@ -15,7 +15,7 @@ const { title, description, year, link, tags } = props;
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          class="mt-[.75rem] px-[1.5rem] py-[.875rem] border rounded-lg border-zinc-300 bg-zinc-950 dark:bg-white text-white dark:text-zinc-950 hover:bg-zinc-800 dark:hover:bg-zinc-100 inline-flex items-center gap-2 button-disabled"
+          class="mt-[.75rem] px-[1.5rem] py-[.875rem] border rounded-lg border-zinc-300 bg-zinc-950 dark:bg-white text-white dark:text-zinc-950 hover:bg-zinc-800 dark:hover:bg-zinc-100 inline-flex items-center gap-2"
         >
           View Project
           <span class="material-icons !text-[1.25rem]">open_in_new</span>
@@ -23,12 +23,7 @@ const { title, description, year, link, tags } = props;
       </p>
     )}
   </div>
-
-  <div class="p-4 border-t border-zinc-200 dark:border-zinc-600">
-    {tags && tags.length > 0 && (
-      <ul class="tags flex flex-row gap-2">
-        {tags.map(tag => <li class="bg-zinc-200 dark:bg-zinc-700 px-2 py-1 inline-block text-sm rounded-sm text-zinc-700 dark:text-zinc-100">{tag}</li>)}
-      </ul>
-    )}
+  <div class="order-1 md:order-2 md:col-span-2 md:px-4">
+    <img src={imageUrl} alt="Project Image" class="w-full h-auto rounded-lg">
   </div>
 </article>

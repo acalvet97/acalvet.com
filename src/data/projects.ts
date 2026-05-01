@@ -2,17 +2,12 @@ import type { Project } from "../types/project";
 
 export const projects: Project[] = [
   {
-    title: "TradeAudit",
-    description: "A tool that connects to users’ crypto exchanges, analyzes their trading activity, and displays actionable insights on a performance dashboard.",
-    year: 2025,
-    link: "#",
-    tags: ["Astro", "PHP"]
+    title: "Klira",
+    logoUrl: "/img/projects/Klira-logo.svg",
+    description: "Klira is a capacity management tool for service team managers. It gives instant visibility into committed workload, so managers can evaluate new projects against real team availability and make faster, more confident resourcing decisions.",
+    year: 2026,
+    link: "https://useklira.com",
+    tags: ["Astro", "PHP"],
+    imageUrl: "/img/projects/Klira-home.png"
   },
-  {
-    title: "Coach Finder",
-    description: "A two-sided marketplace connecting basketball clubs with coaches, focused on formative, non-professional basketball in Spain.",
-    year: 2025,
-    link: "#",
-    tags: ["Next.js", "PostgresSQL"]
-  }
 ];
